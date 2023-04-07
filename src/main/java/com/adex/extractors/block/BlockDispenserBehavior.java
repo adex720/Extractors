@@ -17,19 +17,19 @@ import net.minecraft.world.World;
 
 public class BlockDispenserBehavior implements DispenserBehavior {
 
-    public static boolean isValidBlock(World world, BlockState blockState, BlockPos blockPos) {
+    public boolean isValidBlock(BlockState blockState) {
         if (blockState.hasBlockEntity()) return false;
         if (blockState.isIn(ModTags.INEXTRICABLE_BLOCKS)) return false;
         if (blockState.getBlock().getHardness() == -1.0F) return false;
-
-        if (blockPos.getY() < world.getBottomY()) return false;
-        if (blockPos.getY() > world.getTopY() - 1) return false;
-        if (!world.getWorldBorder().contains(blockPos)) return false;
 
         return blockState.getPistonBehavior() == PistonBehavior.NORMAL;
     }
 
     public static boolean isValidPosForBlock(World world, BlockState blockState, BlockPos blockPos) {
+        if (blockPos.getY() < world.getBottomY()) return false;
+        if (blockPos.getY() > world.getTopY() - 1) return false;
+        if (!world.getWorldBorder().contains(blockPos)) return false;
+
         return blockState.canPlaceAt(world, blockPos);
     }
 
@@ -61,7 +61,7 @@ public class BlockDispenserBehavior implements DispenserBehavior {
             BlockPos blockPos = BlockPos.ofFloored(position);
             BlockState blockState = block.getDefaultState();
 
-            if (isValidBlock(world, blockState, blockPos) && isValidPosForBlock(world, blockState, blockPos)) {
+            if (isValidBlock(blockState) && isValidPosForBlock(world, blockState, blockPos)) {
                 spawnBlock(world, block, blockState, blockPos, stack);
                 return stack;
             }

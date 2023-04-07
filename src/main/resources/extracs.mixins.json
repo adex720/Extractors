@@ -4,6 +4,7 @@
   "package": "com.adex.extractors.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "DispenserBlockEntityInvoker"
   ],
   "client": [
   ],
