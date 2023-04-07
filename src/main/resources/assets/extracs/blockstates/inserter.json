@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "extracs:block/inserter_vertical",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "extracs:block/inserter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "extracs:block/inserter"
+    },
+    "facing=south": {
+      "model": "extracs:block/inserter",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "extracs:block/inserter_vertical"
+    },
+    "facing=west": {
+      "model": "extracs:block/inserter",
+      "y": 270
+    }
+  }
+}

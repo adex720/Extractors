@@ -1,5 +1,7 @@
 package com.adex.extractors;
 
+import com.adex.extractors.registry.ModBlockEntities;
+import com.adex.extractors.registry.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +16,9 @@ public class Extractors implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Starting to initialize {}", MOD_ID);
 
+        ModBlocks.registerBlocks();
 
+        ModBlockEntities.registerBlockEntities();
 
 
         LOGGER.info("Finished initializing {}", MOD_ID);

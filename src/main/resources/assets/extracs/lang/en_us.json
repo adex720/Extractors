@@ -1,0 +1,7 @@
+{
+  "block.extracs.extractor": "Extractor",
+  "block.extracs.inserter": "Inserter",
+
+  "container.extractor": "Extractor",
+  "container.inserter": "Inserter"
+}
