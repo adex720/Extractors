@@ -1,7 +1,7 @@
 package com.adex.extractors.registry;
 
-import com.adex.extractors.block.extity.ExtractorBlockEntity;
-import com.adex.extractors.block.extity.InserterBlockEntity;
+import com.adex.extractors.block.entity.ExtractorBlockEntity;
+import com.adex.extractors.block.entity.InserterBlockEntity;
 import com.adex.extractors.util.Util;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.datafixer.TypeReferences;

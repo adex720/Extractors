@@ -1,4 +1,4 @@
-package com.adex.extractors.block.extity;
+package com.adex.extractors.block.entity;
 
 import com.adex.extractors.registry.ModBlockEntities;
 import net.minecraft.block.BlockState;
