@@ -21,12 +21,11 @@ public class ExtractorBlock extends DispenserBlock {
         return BEHAVIOR;
     }
 
-
     @Override
     protected void dispense(ServerWorld world, BlockPos pos) {
         BlockPointerImpl blockPointerImpl = new BlockPointerImpl(world, pos);
         DispenserBlockEntity blockEntity = blockPointerImpl.getBlockEntity();
-        if (ExtractorBlockEntity.hasEmptySlot(blockEntity)) {
+        if (!ExtractorBlockEntity.hasEmptySlot(blockEntity)) {
             world.syncWorldEvent(1001, pos, 0);
             world.emitGameEvent(null, GameEvent.DISPENSE_FAIL, pos);
         } else {
