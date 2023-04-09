@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "extracs:extractor",
+    "extracs:inserter"
+  ]
+}
